@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Custom</string>
+    <string name="user_hint">请输入用户名</string>
+    <string name="pass_hint">请输入密码</string>
+    <string name="confirm_hint">确认密码</string>
+    <string name="email_hint">请输入E-mail</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="error_user">用户名不能为空</string>
+    <string name="error_pass">密码不能为空</string>
+    <string name="error_email">E-mail不能为空</string>
+    <string name="check_email">E-mail不匹配</string>
+    <string name="check_pass">两次输入密码不一致</string>
+    <string name="check">请重新检查</string>
+    <string name="login_success">登录成功</string>
+    <string name="register_success">注册成功</string>
+</resources>
