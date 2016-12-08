@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.yk.custom.R;
 import com.yk.custom.adapter.ViewPagerAdapter;
+import com.yk.custom.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +37,7 @@ public class GuideActivity extends AppCompatActivity implements ViewPager.OnPage
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.colorPrimary),true);
         setContentView(R.layout.activity_guide);
         // 初始化页面
         initViews();

@@ -7,10 +7,37 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="MyOverFlowText" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
+
     <style name="MyErrorText" parent="TextAppearance.AppCompat.Small">
-    <item name="android:textColor">#ec4722</item>
+        <item name="android:textColor">#ec4722</item>
+    </style>
+
+    <style name="Theme.ToolBar.ZhiHu" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
+    </style>
+
+    <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_menu_more_overflow</item>
+    </style>
+
+    <style name="AppTheme.NoTiltleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- 浅蓝色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 深蓝色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Drawer.ArrowAnimation" parent="AppTheme">
+        <!-- 箭头 -->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+    <!-- 箭头颜色 -->
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
     </style>
 </resources>

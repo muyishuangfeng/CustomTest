@@ -31,5 +31,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:25.0.0'
     compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.google.okhttp:okhttp:20120626'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.githang:status-bar-compat:0.3'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.orhanobut:logger:1.15'
 }

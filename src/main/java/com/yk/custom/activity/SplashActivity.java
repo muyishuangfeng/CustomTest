@@ -6,7 +6,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.yk.custom.R;
+import com.yk.custom.base.BaseActivity;
 import com.yk.custom.utils.SharedPreferencesUtil;
 
 /**
@@ -26,7 +28,8 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_splash);
+        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.colorPrimary),true);
+        setContentView(R.layout.activity_splash);
         init();
     }
 

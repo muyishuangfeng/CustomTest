@@ -2,12 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textSize="16sp"
-    android:text="HelloWorld"/>
+
+    <include layout="@layout/incloud_toorbar"></include>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_gray">
+        <!--内容视图-->
+        <include
+            layout="@layout/draw_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--左侧滑菜单栏-->
+        <include
+            layout="@layout/draw_menu_layout"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+    </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>

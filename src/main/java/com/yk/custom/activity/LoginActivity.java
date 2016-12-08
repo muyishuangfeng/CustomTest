@@ -4,22 +4,25 @@ import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.yk.custom.R;
+import com.yk.custom.base.BaseActivity;
 import com.yk.custom.utils.ToastUtils;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
     //登录、注册
     public Button mBtnLogin, mBtnRegister;
     //用户名、密码
     public EditText mEdtName, mEdtPass;
     public TextInputLayout mTxtName, mTxtPass;
-
+    public Toolbar mToolBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 初始化控件
      */
     public void initView() {
+        mToolBar=(Toolbar)findViewById(R.id.toolbar);
+        mToolBar.setTitle(R.string.login);
+        mToolBar.setNavigationIcon(R.mipmap.back);
+        mToolBar.setNavigationOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        mToolBar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         mEdtName = (EditText) findViewById(R.id.edt_user);
         mEdtName.addTextChangedListener(new MyTextWatch(mEdtName));
         mEdtPass = (EditText) findViewById(R.id.edt_pass);

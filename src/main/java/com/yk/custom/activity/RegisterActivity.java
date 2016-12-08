@@ -5,13 +5,16 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.yk.custom.R;
+import com.yk.custom.base.BaseActivity;
 import com.yk.custom.utils.ToastUtils;
 
 /**
@@ -20,13 +23,14 @@ import com.yk.custom.utils.ToastUtils;
  * Created by Silence on 2016/12/6.
  */
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends BaseActivity implements View.OnClickListener {
 
     public EditText mEdtName, mEdtPass, mEdtConfir, medtEmail;
     //用户名、密码、E-mail、确认密码
     public TextInputLayout mTxtName, mTxtPass, mTxtEmail, mTxtConfirm;
     //注册
     public Button mBtnRegister;
+    public Toolbar mToolBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
      * 初始化控件
      */
     public void initView() {
+        mToolBar=(Toolbar)findViewById(R.id.toolbar);
+        mToolBar.setTitle(R.string.register);
+        mToolBar.setNavigationIcon(R.mipmap.back);
+        mToolBar.setNavigationOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        mToolBar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
+
         medtEmail = (EditText) findViewById(R.id.edt_email);
         mEdtPass = (EditText) findViewById(R.id.edt_pass);
         mEdtName = (EditText) findViewById(R.id.edt_user);
